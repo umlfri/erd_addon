@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ElementType id="arc" xmlns="http://umlfri.org/v2/addon.xsd">
+    <Icon path="icons/arc.png"/>
+
+    <Structure>
+        <Attribute id="orientation" type="enum" default="bottom">
+            <Value value="right"/>
+            <Value value="left"/>
+            <Value value="top"/>
+            <Value value="bottom"/>
+        </Attribute>
+    </Structure>
+    
+    <DisplayName/>
+
+    <Appearance>
+        <Switch value="#self.orientation">
+            <Case value="right">
+                <Sizer width="10">
+                    <VBox>
+                        <Sizer height="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="9.5" y="10"/>
+                                    <CubicTo x1="10" y1="4.46" x2="5.54" y2="0" x="0" y="0"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                        <Sizer minheight="10" vbox-expand="true">
+                            <Align horizontal="right">
+                                <Line orientation="vertical" color="black" />
+                            </Align>
+                        </Sizer>
+                        <Sizer height="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="9.5" y="0"/>
+                                    <CubicTo x1="10" y1="5.54" x2="5.54" y2="10" x="0" y="10"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                    </VBox>
+                </Sizer>
+            </Case>
+            <Case value="left">
+                <Sizer width="10">
+                    <VBox>
+                        <Sizer height="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="0.5" y="10"/>
+                                    <CubicTo x1="0" y1="4.46" x2="4.46" y2="0" x="10" y="0"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                        <Sizer minheight="10" vbox-expand="true">
+                            <Align horizontal="left">
+                                <Line orientation="vertical" color="black" />
+                            </Align>
+                        </Sizer>
+                        <Sizer height="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="0.5" y="0"/>
+                                    <CubicTo x1="0" y1="5.54" x2="4.46" y2="10" x="10" y="10"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                    </VBox>
+                </Sizer>
+            </Case>
+            <Case value="top">
+                <Sizer height="10">
+                    <HBox>
+                        <Sizer width="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="10" y="0.5"/>
+                                    <CubicTo x1="4.46" y1="0" x2="0" y2="4.46" x="0" y="10"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                        <Sizer minwidth="10" hbox-expand="true">
+                            <Align vertical="top">
+                                <Line orientation="horizontal" color="black" />
+                            </Align>
+                        </Sizer>
+                        <Sizer width="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="0" y="0.5"/>
+                                    <CubicTo x1="5.54" y1="0" x2="10" y2="4.46" x="10" y="10"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                    </HBox>
+                </Sizer>
+            </Case>
+            <Case value="bottom">
+                <Sizer height="10">
+                    <HBox>
+                        <Sizer width="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="10" y="9.5"/>
+                                    <CubicTo x1="4.46" y1="10" x2="0" y2="5.54" x="0" y="0"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                        <Sizer minwidth="10" hbox-expand="true">
+                            <Align vertical="bottom">
+                                <Line orientation="horizontal" color="black" />
+                            </Align>
+                        </Sizer>
+                        <Sizer width="10">
+                            <Graphics height="10" width="10">
+                                <Path border="black">
+                                    <MoveTo x="0" y="9.5"/>
+                                    <CubicTo x1="5.54" y1="10" x2="10" y2="5.54" x="10" y="0"/>
+                                </Path>
+                            </Graphics>
+                        </Sizer>
+                    </HBox>
+                </Sizer>
+            </Case>
+        </Switch>
+    </Appearance>
+</ElementType>

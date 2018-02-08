@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns="http://umlfri.org/v2/addon.xsd">
+    <ArrowDefinition id="multiple_cardinality" path="M -10,0 L 0,-20 L 10,0" center="0,0" rotation="270°" />
+    <ArrowDefinition id="nontransferable" path="M -6,-32.4852816 L 0,-40.970562 L 6,-32.4852816 L 0,-24 L -6,-32.4852816 z" center="0,0" rotation="270°" />
+    <ArrowDefinition id="barred" path="M 10,-46 L -10,-46" center="0,0" rotation="270°" />
+    
+    <CornerDefinition id="rounded" path="M 0,10 C 0,4.46 4.46,0 10,0" center="0,0" corner="top left" />
+</Definitions>

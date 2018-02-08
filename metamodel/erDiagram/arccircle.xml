@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ElementType id="arccircle" xmlns="http://umlfri.org/v2/addon.xsd">
+    <Icon path="icons/circle.png"/>
+
+    <Structure />
+
+    <DisplayName/>
+
+    <Appearance>
+        <Sizer width="20" height="20">
+            <Ellipse fill="white" border="black"/>
+        </Sizer>
+    </Appearance>
+</ElementType>

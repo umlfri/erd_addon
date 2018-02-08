@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template id="empty" xmlns="http://umlfri.org/v2/addon.xsd">
+    <Element type="package">
+        <Attribute id="name" value="ERD"/>
+        <Diagram type="er_diagram" state="locked"/>
+    </Element>
+</Template>

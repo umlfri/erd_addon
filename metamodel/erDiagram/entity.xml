@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ElementType id="entity" xmlns="http://umlfri.org/v2/addon.xsd">
+    <Icon path="icons/entity.png"/>
+
+    <Structure>
+        <Attribute id="name" type="str">
+            <Template>
+                <Text text="Entity"/>
+                <Text text="#no"/>
+            </Template>
+        </Attribute>
+        <Attribute id="attributes" type="object[]">
+            <Attribute id="name" type="str" />
+            <Attribute id="mandatority" type="enum" default="optional">
+                <Value value="uid"/>
+                <Value value="alternativeuid"/>
+                <Value value="mandatory"/>
+                <Value value="optional"/>
+            </Attribute>
+        </Attribute>
+        <Attribute id="note" type="text"/>
+    </Structure>
+
+    <DisplayName>
+        <Text text="#self.name"/>
+    </DisplayName>
+
+    <Appearance>
+        <Sizer minwidth="170" minheight="110">
+            <Rectangle fill="gray87" border="black" topright="rounded" bottomright="rounded" topleft="rounded" bottomleft="rounded">
+                <Padding padding="15">
+                    <Align vertical="top" horizontal="left">
+                        <VBox>
+                            <Padding bottom="3">
+                                <TextBox text="#self.name" font="Times New Roman bold 12" color="black"/>
+                            </Padding>
+                            
+                            <Table>
+                                <ForEach src="#self.attributes" item="attr">
+                                    <If condition="#attr.mandatority == 'uid'">
+                                        <Row>
+                                            <TextBox text="## " font="Times New Roman 12" color="black"/>
+                                            
+                                            <TextBox text="#attr.name" font="Times New Roman 12" color="black"/>
+                                        </Row>
+                                    </If>
+                                </ForEach>
+        
+                                <ForEach src="#self.attributes" item="attr">
+                                    <If condition="#attr.mandatority == 'alternativeuid'">
+                                        <Row>
+                                            <TextBox text="(#)" font="Times New Roman 12" color="black"/>
+        
+                                            <TextBox text="#self.name" font="Times New Roman 12" color="black"/>
+                                        </Row>
+                                    </If>
+                                </ForEach>
+        
+                                <ForEach src="#self.attributes" item="attr">
+                                    <If condition="#attr.mandatority == 'mandatory' || attr.mandatority == 'optional'">
+                                        <Row>
+                                            <Switch value="#attr.mandatority">
+                                                <Case value="mandatory">
+                                                    <TextBox text="* " font="Times New Roman 12" color="black"/>
+                                                </Case>
+                                                <Case value="optional">
+                                                    <TextBox text="&#9702; " font="Times New Roman 12" color="black"/>
+                                                </Case>
+                                            </Switch>
+        
+                                            <TextBox text="#attr.name" font="Times New Roman 12" color="black"/>
+                                        </Row>
+                                    </If>
+                                </ForEach>
+                            </Table>
+                        </VBox>
+                    </Align>
+                </Padding>
+            </Rectangle>
+        </Sizer>
+    </Appearance>
+</ElementType>
