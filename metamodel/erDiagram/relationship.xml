@@ -68,9 +68,9 @@
         <If condition="#self.end.barred">
             <Arrow position="100%" style="barred" color="black"/>
         </If>
-        
+
         <Label position="0%" id="begin_name">
-            <If condition="#self.begin.name">
+            <If condition="#self.begin.name.has_text()">
                 <Rectangle fill="white">
                     <TextBox text="#self.begin.name" font="Times New Roman 12" color="black"/>
                 </Rectangle>
@@ -78,7 +78,7 @@
         </Label>
 
         <Label position="100%" id="end_name">
-            <If condition="#self.end.name">
+            <If condition="#self.end.name.has_text()">
                 <Rectangle fill="white">
                     <TextBox text="#self.end.name" font="Times New Roman 12" color="black"/>
                 </Rectangle>
